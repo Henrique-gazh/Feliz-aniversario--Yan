@@ -22,7 +22,7 @@ const CONFIG = {
     { src: "assets/images/foto-03.jpg", alt: "Jovem de terno escuro olhando para o lado, em uma varanda à noite", caption: "Feliz aniversário, irmão" },
     { src: "assets/images/foto-04.jpg", alt: "Jovem de terno escuro com a mão no rosto, em uma varanda à noite", caption: "Mesmo você sendo gay, gosto muito de você" },
     { src: "assets/images/foto-05.jpg", alt: "Selfie em close de um jovem deitado", caption: "Conte comigo para tudo", ratio: "4/3", pos: "50% 40%" },
-    { src: "assets/images/foto-06.jpg", alt: "Jovem de camiseta marrom olhando por cima do ombro, em uma rua ao entardecer", caption: "E se o Flávio ganha, eu prometo não te jogar na fogueira" }
+    { src: "assets/images/foto-06.jpg", alt: "Jovem de camiseta marrom olhando por cima do ombro, em uma rua ao entardecer", caption: "E se o Flávio ganhar, eu prometo não te jogar na fogueira" }
   ],
 
   /* MENSAGEM PESSOAL — um item por parágrafo. */
