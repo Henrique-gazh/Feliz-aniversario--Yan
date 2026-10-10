@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday, Yan!</title>
+<meta name="theme-color" content="#05050A">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body data-scene="0">
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<!-- Música: configure em js/script.js (CONFIG.music) -->
+<div class="dock">
+  <button class="btn sm" id="musicBtn" type="button" aria-pressed="false">♪ <span>Tocar música</span></button>
+  <a class="btn sm" id="musicLink" target="_blank" rel="noopener" hidden>♪ Ouvir Supernova (YouTube)</a>
+  <small id="musicNote" hidden>A trilha ainda precisa ser configurada.</small>
+</div>
+
+<main>
+  <!-- 1. PORTAL E REVELAÇÃO -->
+  <section class="scene active intro" id="s1" aria-labelledby="t1">
+    <div class="wrap center">
+      <svg class="portal" viewBox="-220 -220 440 440" aria-hidden="true">
+        <circle class="r1" r="200"/><circle class="r2" r="150"/><circle class="r3" r="100"/><circle class="r4" r="50"/>
+      </svg>
+      <h1 id="t1" class="metal" tabindex="-1">HAPPY BIRTHDAY, YAN!</h1>
+      <p class="lead">Um portal foi aberto para você.</p>
+      <button class="btn" id="enter" type="button">Entrar na experiência</button>
+    </div>
+  </section>
+
+  <!-- 2. UNIVERSO AESPA -->
+  <section class="scene" id="s2" aria-labelledby="t2" inert>
+    <div class="wrap">
+      <h2 id="t2" class="metal" tabindex="-1">Bem-vindo ao seu universo</h2>
+      <div class="hud" aria-hidden="true"><span>SYNK : ON</span><span>REAL × DIGITAL</span><i></i></div>
+      <p class="lead">Suas três cantoras favoritas</p>
+      <!-- PERSONALIZE: para colocar a foto, adicione dentro de cada <figure>, ANTES do <figcaption>:
+           <img src="assets/images/karina.jpg" alt="Karina, da aespa">
+           (use apenas imagens que você pode usar). -->
+      <div class="slots">
+        <figure class="slot"><img src="assets/images/karina.jpg" alt="Karina, da aespa"><figcaption>Karina</figcaption></figure>
+        <figure class="slot"><img src="assets/images/giselle.jpg" alt="Giselle, da aespa"><figcaption>Giselle</figcaption></figure>
+        <figure class="slot"><img src="assets/images/winter.jpg" alt="Winter, da aespa"><figcaption>Winter</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. NOSSA HISTÓRIA (fotos configuradas em js/script.js) -->
+  <section class="scene" id="s3" aria-labelledby="t3" inert>
+    <div class="wrap">
+      <h2 id="t3" class="metal" tabindex="-1">Sua História</h2>
+      <ol class="gallery" id="gallery"></ol>
+    </div>
+  </section>
+
+  <!-- 4. MENSAGEM ESPECIAL (texto em js/script.js) -->
+  <section class="scene" id="s4" aria-labelledby="t4" inert>
+    <div class="wrap center">
+      <h2 id="t4" class="metal" tabindex="-1">Uma mensagem para você</h2>
+      <button class="btn" id="openMsg" type="button" aria-expanded="false" aria-controls="msgPanel">Abrir minha mensagem</button>
+      <div class="panel" id="msgPanel" aria-hidden="true"><div id="msgText"></div></div>
+    </div>
+  </section>
+
+  <!-- 5. ENCERRAMENTO -->
+  <section class="scene" id="s5" aria-labelledby="t5" inert>
+    <div class="wrap center">
+      <p class="lead">Feliz aniversário,</p>
+      <h2 id="t5" class="metal big" tabindex="-1">YAN</h2>
+      <p class="lead" id="finalMsg"></p>
+      <div class="row">
+        <button class="btn" id="again" type="button">Rever a experiência</button>
+        <button class="btn" id="backMsg" type="button">Voltar à mensagem</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="nav" aria-label="Navegação da experiência">
+  <button class="btn sm" id="prev" type="button">‹ Voltar</button>
+  <span class="dots">
+    <button type="button" data-go="0" aria-label="Ir para a abertura"></button>
+    <button type="button" data-go="1" aria-label="Ir para o universo"></button>
+    <button type="button" data-go="2" aria-label="Ir para nossa história"></button>
+    <button type="button" data-go="3" aria-label="Ir para a mensagem"></button>
+    <button type="button" data-go="4" aria-label="Ir para o encerramento"></button>
+  </span>
+  <button class="btn sm" id="next" type="button">Avançar ›</button>
+</nav>
+
+<div id="yt" class="ytbox" aria-hidden="true"></div>
+</body>
+</html>
